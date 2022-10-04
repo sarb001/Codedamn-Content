@@ -6,15 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+
 <body>
 
     <!-- Promises and  fetch -->
+
+
+    
+    <!-- ******** Fetch() API  -->
+    <!-- Provided by the Browser -->
     <!-- The Fetch API provides a JS interface for accesssing and manipulating partsof Protocol  
     such as request and  Responses
-    Helps to fetch resources asyn across the  Network   
+    Helps to fetch resources async across the  Network  22 
     -->
 
+    <!-- Promises()  -->
 
+    <!-- Promises is kind of Object which tell us or promise us to return the output in future  -->
+
+    <script>
+
+    const promiseObject = fetch('/data.json');
+    promiseObject.then(response => {
+        const promiseObject2 = response.json();
+        promiseObject2.then(data =>
+        {
+            console.log(data)
+        })
+    })
+
+    // then  method returns a promise . it takes two arguemnts  -> callback function and other is failure cases withcatch 
+ 
+    </script>
 
 
      <h2> Inside dd   </h2>
