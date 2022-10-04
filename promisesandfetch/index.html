@@ -13,34 +13,175 @@
     <!-- Promises and  fetch -->
 
 
-    
+
     <!-- ******** Fetch() API  -->
     <!-- Provided by the Browser -->
     <!-- The Fetch API provides a JS interface for accesssing and manipulating partsof Protocol  
     such as request and  Responses
-    Helps to fetch resources async across the  Network  22 
+    Helps to fetch resources async across the  Network  
     -->
 
     <!-- Promises()  -->
 
-    <!-- Promises is kind of Object which tell us or promise us to return the output in future  -->
+    <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
 
     <script>
 
-    const promiseObject = fetch('/data.json');
-    promiseObject.then(response => {
-        const promiseObject2 = response.json();
-        promiseObject2.then(data =>
-        {
-            console.log(data)
-        })
-    })
+    // const promiseObject = fetch('/data.json');
+    // promiseObject.then(response => {
+    //     const promiseObject2 = response.json();
+    //     promiseObject2.then(data =>
+    //     {
+    //         console.log(data)
+    //     })
+    // })
 
-    // then  method returns a promise . it takes two arguemnts  -> callback function and other is failure cases withcatch 
- 
+    // .then  method returns a promise which  takes two arguemnts  -> callback function and other is failure cases withcatch
+    
+    
+    // *******
+    //  JS Callbacks ==> 
+        // A Callback  function is a function which is passed into another function as an argument and then invoked 
+        // inside the function to complete some kind of action 
+
+
+        // Basic Callback Function => 
+        // One of the basic Callback Function is => 
+         
+                // setTimeout(() =>
+                // {
+                //     console.log("Hello ")
+                // },200)
+
+        // In this we are telling js to call our callback Function after Waitig for 200ms or 2s .
+        // The setTimeout function tkaes two paramterrs : a callback fn and a timeout number in milliseconds
+
+
+        // ****
+        // In Simple   way we can writwe this as -> 
+
+                //  const timeoutcallback = () =>
+                //  {
+                //     console.log("Hello NEW WAY ")
+                //  }
+                //  setTimeout(timeoutcallback,300);
+
+
+        //  Let's me EXPLAIN you with an more  example => 
+
+        // Normal way of Doing Doing Looping 
+                //  const names = ['james','range','delhi','red'];
+
+                //  names.forEach((names) => {console.log(names)})
+
+
+         // Let's Do with the Callback
+
+            const names = ['james','range','delhi','redwrferwf'];
+
+            const myforeach = (arr,cb) =>
+            {
+                for (let i = 0; i < arr.length; i++) {
+                    const element = arr[i];
+                    cb(element);
+                }
+            }      
+
+            myforeach(names,(name) =>
+            {
+                console.log(name);
+            })
+
+
+
     </script>
-
 
      <h2> Inside dd   </h2>
 </body>
 </html>
+
+
+<!-- Promise -->
+
+    <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
+
+      <!-- function  getmePromise()
+          {
+                // ....
+                // ....
+                return <something> // this is promise 
+          } -->
+
+    <!--  getmePromise()  -->
+
+           <!-- In above function like getmeaPromise 
+             we write the piece of Code and the at the last we
+             want to  return something which is let's suppose  promise
+             
+             so this something in line 112  shows us that it will return us
+             output surely or  after  some time 
+             
+           -->
+
+           <!--   To Better Deal with  this Syntax it is like  
+                we used  .then() to deal 
+               -->
+
+
+   <!--   So *****  -->  
+
+    <!-- Example is like =>  -->
+                <!-- function getmePromise()
+                    {
+                         return fetch('/data.json')
+                    } -->
+
+
+        <!--  Above Example be Like  fetch the data from json file     
+          which surely return us the Promise -->
+
+           <!--   console.log(getmePromise())  -->
+           <!-- After Consoling the Value we get to know about the Situation of Promise   -->
+
+
+       
+     <!-- Both Resolve and Reject are handled in Promise   -->    
+
+      <!-- Promise can be more or less in  three states  ->
+          'pending'  ||  'Resolved'  ||  'Reject'  -->
+
+
+          <!--  After Consoling the  value we get to know that it returns us a state 
+                To  get the desired output  we go deeper one Level 
+           -->
+ 
+                     <!--  function  getmeaPromise()
+                    {
+                        return fetch('/data.json')
+                    } -->
+
+                    <!-- getmeaPromise().then(result =>
+                   {
+                        console.log(result)
+                   }) -->
+
+
+   <!--  ******* -->
+   <!-- .catch in js  -->
+
+    <!-- After then when promise moved from pending to some other state 
+         or if there is any error , to handle it Properly we used catch 
+         
+
+         
+    -->
+
+            <!-- promise.then((data) =>
+            {
+                console.log('Get Something',data)
+            }).catch((error) =>
+            {
+                console.log('Promise failed' ,error)
+            })
+
+                            -->
