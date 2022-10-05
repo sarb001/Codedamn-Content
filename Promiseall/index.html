@@ -55,6 +55,51 @@
         // ==> Object format is Shown 
 
 
+        // 3) => Now use 
+
+            //              async function promisefun()
+            //     {
+            //          const req1 =  fetch('/data1.json') 
+
+            //          const req2 =  fetch('/data2.json') 
+
+            //          const req3 =  fetch('/data3.json') 
+
+            //             const promise = Promise.all([req1,req2,req3])
+ 
+            //              console.log( await promise);
+            //     }
+
+            //  promisefun();
+
+            //  Now if we do it with the help of Promise.all which takes responses in arrays
+            // give us Output 
+
+            // Promise.all returns a single Promise that resolves all  when all promises passed . 
+
+
+
+            // *****
+
+
+            async function promisefun()
+                {
+                     const req1 =  fetch('/data1.json') 
+                     const req2 =  fetch('/data2.json') 
+                     const req3 =  fetch('/data3.json') 
+
+                        const promise = Promise.all([req1,req2,req3])
+ 
+                        const responses = await promise
+
+                        const jsondata = await Promise.all(responses.map(pass => pass.json()))
+                        console.log(jsondata);
+                }
+
+               promisefun();
+  
+            //    If Single Promise fails  then  all fails
+
 
    </script> 
 </body>
