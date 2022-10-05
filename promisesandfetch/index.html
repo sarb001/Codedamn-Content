@@ -77,26 +77,110 @@
 
          // Let's Do with the Callback
 
-            const names = ['james','range','delhi','redwrferwf'];
+            // const names = ['james','range','delhi','redwrferwf'];
 
-            const myforeach = (arr,cb) =>
-            {
-                for (let i = 0; i < arr.length; i++) {
-                    const element = arr[i];
-                    cb(element);
-                }
-            }      
+            // const myforeach = (arr,cb) =>
+            // {
+            //     for (let i = 0; i < arr.length; i++) {
+            //         const element = arr[i];
+            //         cb(element);
+            //     }
+            // }      
 
-            myforeach(names,(name) =>
-            {
-                console.log(name);
+            // myforeach(names,(name) =>
+            // {
+            //     console.log(name);
+            // })
+
+
+
+            // <!--  ***********  -->
+              //    <!-- Async &  Await  -->
+
+            //   Here How Normal  Function works Execution 
+
+        // function promiset()
+        // {
+        //     return new Promise(resolve =>
+        //     {     setTimeout(() =>
+        //         {
+        //             resolve();
+        //         },1000)
+        //     })
+        // }
+
+        // promiset().then(() =>
+        // {
+        //     console.log('statement 111 ')
+        //     return promiset();
+        // }).then(() =>
+        // {
+        //     console.log('statement 222 ')
+        //     return promiset();
+        // }).then(() =>
+        // {
+        //     console.log('statement 3333 ')
+        //     return promiset();
+        // })
+
+
+
+        // Output is ->  statement 111 
+                      //  statement 222
+                     //  statement 333 
+                     
+                     
+
+            // *********
+
+             function promiset()
+        {
+            return new Promise(resolve =>
+            {     setTimeout(() =>
+                {
+                    resolve();
+                },1000)
             })
+        }
 
+
+        // async function boot()
+        // {
+        //         promiset();
+        //         console.log(" Placed Finally 1 ")
+        // }
+
+            // If  we directly write this it is not gurranted that promiset() has been executed properly first and then  console will get  executed
+
+            // *****
+            // or in other words we can say that if fetch is placed at Line 149 ,     
+            //  before console then it is not sure data will be fetched first and then  valueis consoled 
+
+
+            // So need something which can help or wait until thisfunction return us back something 
+
+
+            // So write await 
+
+
+               async function boot()
+            {
+                await promiset();
+                console.log(" Placed Finally 111 ")
+
+                await promiset();
+                console.log(" Placed Finally 222 ")
+
+                await promiset();
+                console.log(" Placed Finally 333 ")
+            }
+
+         boot();
 
 
     </script>
 
-     <h2> Inside dd   </h2>
+     <h2> Inside dd wrvqew ervds   </h2>
 </body>
 </html>
 
@@ -123,7 +207,7 @@
              
            -->
 
-           <!--   To Better Deal with  this Syntax it is like  
+           <!--   To Better Deal with  this Syntax 
                 we used  .then() to deal 
                -->
 
@@ -153,6 +237,9 @@
 
           <!--  After Consoling the  value we get to know that it returns us a state 
                 To  get the desired output  we go deeper one Level 
+
+
+                .then method returns  a promise which allows for Method Chaining 
            -->
  
                      <!--  function  getmeaPromise()
@@ -185,3 +272,10 @@
             })
 
                             -->
+
+
+
+
+
+
+ 
