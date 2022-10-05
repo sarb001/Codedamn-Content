@@ -73,6 +73,7 @@
             //  promisefun();
 
             //  Now if we do it with the help of Promise.all which takes responses in arrays
+            // and take it in Sequence or like in array [0] [1] [2]...
             // give us Output 
 
             // Promise.all returns a single Promise that resolves all  when all promises passed . 
@@ -82,23 +83,56 @@
             // *****
 
 
+            //         async function promisefun()
+            //     {
+            //          const req1 =  fetch('/data1.json') 
+            //          const req2 =  fetch('/data2.json') 
+            //          const req3 =  fetch('/data3.json') 
+
+            //             const promise = Promise.all([req1,req2,req3])
+ 
+            //             const responses = await promise
+
+            //             const jsondata = await Promise.all(responses.map(pass => pass.json()))
+            //             console.log(jsondata);
+            //     }
+
+            //    promisefun();
+  
+            //    If Single Promise fails  then  all fails
+
+
+
+            // *******
+            // Promise.allSettled 
+
+            // One of themain reason to use Promise.allSettled is that  promise.all  
+            //  fails the all request when even a single request fails 
+
+            // Which is some times good but sometimes bad
+            // So Handle this type of data we  will used Promise.allSettled
+
+
+            // Promise.allSettled is used to return  a promise  that fulfills   after all the given promises
+            // have either filfilled or rejected  , and also give us the outcome of  promise or can say tell the 
+            // reason 
+
+
             async function promisefun()
                 {
                      const req1 =  fetch('/data1.json') 
                      const req2 =  fetch('/data2.json') 
                      const req3 =  fetch('/data3.json') 
 
-                        const promise = Promise.all([req1,req2,req3])
+                        const promise = Promise.allSettled([req1,req2,req3])
  
                         const responses = await promise
-
-                        const jsondata = await Promise.all(responses.map(pass => pass.json()))
-                        console.log(jsondata);
+                        console.log(responses);
                 }
 
                promisefun();
-  
-            //    If Single Promise fails  then  all fails
+
+            //    With this statement now we get the status and the value of each Promise 
 
 
    </script> 
