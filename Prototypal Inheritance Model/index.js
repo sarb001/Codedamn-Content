@@ -49,7 +49,7 @@
      
     //  const obj1 =  car();
 
-    //  This will give you undefined as output hen accessing car.fuel 
+    //  This will give you undefined as output then accessing car.fuel 
 
 
     // But for accesing internal data we need to use new 
@@ -73,22 +73,53 @@
     // /   Prototype chains kind of  inheritance Implementation of OOPS in which class can be get fromit and can do the same
      
     
-        function car()
-     {
-        this.fuel = 100;
-        this.wheels = 4
-     }
+    //     function car()
+    //  {
+    //     this.fuel = 100;
+    //     this.wheels = 4
+    //  }
      
-     car.prototype.type = 'vehicle Mustang '
+    //  car.prototype.type = 'vehicle Mustang '
 
-     const obj1 =  new car();       // with this he can sw
-     const obj2 =  new car();
+    //  const obj1 =  new car();       
+    //  const obj2 =  new car();
 
 
-    //  Now with the help of 77 ( car )line we are able to add new value to .prototype
+    //  Now with the help of 76 ( car )line we are able to add new value to .prototype
     //  can change it easly  .
 
 
     //  Functional Prototype Chain ispresent after that wherer type = "vehicle"  is present 
 
     // It is great to use that 
+
+
+
+
+    // **********
+    // Diff between innerTEXT vs innerHTML 
+
+    // const button = document.getElementById('btn');
+
+    // button.onclick = () =>
+    // {
+    //     button.innerText = "<b>Somethng else is cha</b> <h3> America wale bai </h3>";
+    // }
+
+    // *         With the innerText we are able to Edit the Node Content Directly in which it is Present 
+    // * * =>    It doesn't Encode the tags present in that like <b></b> bold and others 
+
+
+
+    // *****
+    // innerHTML ==> 
+
+    const button = document.getElementById('btn');
+
+    button.onclick = () =>
+    {
+        button.innerHTML = "<b>Somethng else is cha</b> <h3> America wale bai </h3>";
+    }
+
+    //   Here the innerHTML we are able to Encode tags and all others 
+    // It is kind of risky  to  use this 
