@@ -114,12 +114,15 @@
     // *****
     // innerHTML ==> 
 
-    const button = document.getElementById('btn');
+            // const button = document.getElementById('btn');
 
-    button.onclick = () =>
-    {
-        button.innerHTML = "<b>Somethng else is cha</b> <h3> America wale bai </h3>";
-    }
+            // button.onclick = () =>
+            // {
+            //     button.innerHTML = "<b>Somethng else is cha</b> <h3> America wale bai </h3>";
+            // }
 
     //   Here the innerHTML we are able to Encode tags and all others 
     // It is kind of risky  to  use this 
+
+
+
