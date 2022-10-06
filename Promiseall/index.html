@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
- <link href = "style.css" rel = "stylesheet">
+
 
 <body>
     <h2> Insiefvsdcde Camus   </h2>
@@ -16,6 +16,7 @@
    <script> 
 
         // ******
+        // Promise.all ==> 
         // 1) ==> This is the Normal way 
         
 
@@ -53,6 +54,22 @@
 
 
         // ==> Object format is Shown 
+    //  ==>  when we get the data it is independent of each other which consume more time
+    //      =>   But Browser has More Capability to do it Simulataneously 
+    // To  Perform this funcitonality we will use Promise.all()
+
+
+    // => Benefit of Using Promise.all   is that this will return a promise which will  only resovled when 
+    // => all the  promises inside  this get resolved  properly 
+    //    otherwise  with await only we get  only promise with pending state which is not  efficient 4
+
+
+    // Definiton of Promsise.all -> It is an method which  takes promises an input , and returns a Single Promise
+    //  in the form of an array 
+    
+
+
+
 
 
         // 3) => Now use 
@@ -83,21 +100,20 @@
             // *****
 
 
-            //         async function promisefun()
-            //     {
-            //          const req1 =  fetch('/data1.json') 
-            //          const req2 =  fetch('/data2.json') 
-            //          const req3 =  fetch('/data3.json') 
+                    async function promisefun()
+                {
+                     const req1 =  fetch('/data1.json') 
+                     const req2 =  fetch('/data2.json') 
+                     const req3 =  fetch('/data3.json') 
 
-            //             const promise = Promise.all([req1,req2,req3])
- 
-            //             const responses = await promise
+                    const promise = Promise.all([req1,req2,req3])        
+                    const responses = await promise
 
-            //             const jsondata = await Promise.all(responses.map(pass => pass.json()))
-            //             console.log(jsondata);
-            //     }
+                        const jsondata = await Promise.all(responses.map(t => t.json()))
+                        console.log(jsondata);
+                }
 
-            //    promisefun();
+               promisefun(); 
   
             //    If Single Promise fails  then  all fails
 
@@ -118,19 +134,19 @@
             // reason 
 
 
-            async function promisefun()
-                {
-                     const req1 =  fetch('/data1.json') 
-                     const req2 =  fetch('https://vergrttebfdv//evd ') 
-                     const req3 =  fetch('/data3.json') 
+            // async function promisefun()
+            //     {
+            //          const req1 =  fetch('/data1.json') 
+            //          const req2 =  fetch('https://vergrttebfdv//evd ') 
+            //          const req3 =  fetch('/data3.json') 
 
-                        const promise = Promise.allSettled([req1,req2,req3])
+            //             const promise = Promise.allSettled([req1,req2,req3])
  
-                        const responses = await promise
-                        console.log(responses);
-                }
+            //             const responses = await promise
+            //             console.log(responses);
+            //     }
 
-               promisefun();
+            //    promisefun();
 
             //    With this statement now we get the status and the value of each Promise 
             // So  *)  Now Every Promise will give us Diff output independent of each other
