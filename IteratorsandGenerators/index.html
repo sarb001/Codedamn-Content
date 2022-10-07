@@ -123,21 +123,47 @@
 // => We can stop the funcitonality of generator fUCNTION BY USING  yield keyword
 // ==> yield expression returns a value rather than terminating the Program 
 
- function* first()
- {
-    console.log('Before 122')
-    yield 1 ;
+    //  function* first()
+    //  {
+    //     console.log('Before 122')
+    //     yield 1 ;
 
-    console.log('Before 2 After 1 ')
-    yield 1 ;
- }
+    //     console.log('Before 2 After 1 ')
+    //     yield 1 ;
+    //  }
 
 
-   const getobj = first();
+    //    const getobj = first();
 
-  console.log(getobj.next());       // with this .next()  Code upto first yield is Executed 
+            //   console.log(getobj.next());       // with this .next()  Code upto first yield is Executed 
 
 //   *** Can pass Arguemnts to Generator Function 
+
+
+  function* generatorfunc()
+  {
+     let x  =  yield 'heelo';
+
+     console.log(x);
+     console.log('some Code ');
+
+     yield 5 ;
+  }
+
+  const  generator = generatorfunc();
+
+  console.log(generator.next());
+  console.log(generator.next(6));
+  console.log(generator.next());
+
+// Uses of Generators 
+
+// 1) => Generators let us write Clean Code while writing asynchronous tasks 
+// 2) => It provies an easy way to implement iterators
+
+// 3) => It only Execute Code when Required 
+// 4) => Geneators are Memory Efficient . 
+
 
 
 </script>
