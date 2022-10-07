@@ -1,7 +1,7 @@
 
 
 // obj is an object whose prototype is to be returned 
-// If no inherited properties are there thn, this method will return null
+// If no inherited properties are there then, this method will return null
 
         // const a = {
         //    prop1 : 1
@@ -33,8 +33,10 @@
 
 
     // ******
-    // Object.setPrototypeof()  ===>    This is used to  create 1 Object inside Another Object and can access it easilly 
+    // Object.setPrototypeof()  ===>    This is used to  create 1 Object inside Another Object and can access it easily  
     // We are able to set it  Now By  itself 
+
+        // why ?? 
 
 
     // ******
@@ -89,7 +91,7 @@
     //  can change it easly  .
 
 
-    //  Functional Prototype Chain ispresent after that wherer type = "vehicle"  is present 
+    //  Functional Prototype Chain is  present ( shown in Console  ) after that wherer type = "vehicle"  is present 
 
     // It is great to use that 
 
@@ -118,7 +120,7 @@
 
             // button.onclick = () =>
             // {
-            //     button.innerHTML = "<b>Somethng else is cha</b> <h3> America wale bai </h3>";
+            //     button.innerHTML = "<b>  Somethng else is cha</b> <h3> America wale bai </h3>";
             // }
 
     //   Here the innerHTML we are able to Encode tags and all others 
