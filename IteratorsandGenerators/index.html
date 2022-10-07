@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h2>  Inside Iterators </h2>
+    </div>
+
+    <!-- Iterators is an Object which implements the for .. of  loop property by having a next method that returns two Object properties 
+     First ==> value   Second ==>  done 
+    -->
+
+
+     <!-- If we start with Beginiing that we already have for loops like for in loop which peforms the same Fucntionality 
+         but then why we need this Iterators with for of functionlity 
+
+         *** => So Reason is  that In for of loop functionality we have to write pieceof code like this --
+
+           const arr = ["one","second","three"];
+
+           for(int i=0;i<arr.length;i++)
+           {
+              console.log(arr[i])
+           }
+
+
+           ** Which is gd but we can do better 
+           ** -- So we can use for of looop 
+
+           for(let arr of values)
+           {
+                console.log(values);
+           }
+    
+
+           ** So Both gives us the Same Functionality  
+           but in case of for of loop we used less Code 
+           
+           
+           ** In Both Conditions we have to iterate over full array 
+             but what if we want to iterate over  half or want to skip something 
+             
+             we can do that with iterator 
+
+             ** Syntax is -> 
+
+             var x = ["Apple","Orange","papaya"];
+
+             let y = x[Symbol.iterator]();
+             y.next();
+
+
+             ** Above Lines written is the Syntax  Symbol iskind of datatype which is used for Unique data 
+             
+             ** next() is used for next element 
+             ** So above Code will give us the Output -> Apple 
+
+             ** only gives us one output 
+             * writing one more y.next() gives us orange 
+
+             ** So in this way we are able to get any data we want 
+    -->
+
+
+
+
+ <script src= "index.js"> </script>
+
+</body>
+</html>
