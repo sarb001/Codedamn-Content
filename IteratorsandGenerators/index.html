@@ -65,12 +65,82 @@
              * writing one more y.next() gives us orange 
 
              ** So in this way we are able to get any data we want 
+
+            ***  ==> Proper Example => 
     -->
 
+ <script> 
+
+// This Code helps us to get data specific
+
+        //     let numbers =  [100,200,300];
+        //    let iter =    numbers[Symbol.iterator]();
+        //    iter.next()
+        //    iter.next()
+        //    console.log(iter.next()) 
+
+
+//  78 =>   {value : 100,done:false}
+//  79 =>   {value : 200,done:false}
+//  80 =>   {value : 300,done:false}
 
 
 
- <script src= "index.js"> </script>
+// Now if we want to skip we can just skip it without consoling the value 
+
+//    let numbers =  [100,200,300];
+//    let iter =    numbers[Symbol.iterator]();
+//    iter.next()
+//    iter.next()
+//    console.log(iter.next()) 
+
+
+// Output of this is ==> 300  we skipfirst two 
+
+// Iterators can beused with used Strings also .
+
+
+// ==>>   ******
+//  Javascript Generators 
+
+// ==> Generators provide a new way to work with functions and iterators 
+
+// ***** 1) You can stop the Execution of function from anywhere insdie function 
+
+// Syntax of Generator JS => 
+
+//  function* first()
+//  {
+//      console.
+//  }
+
+//  const genertor_obj = first;
+//  console.log(genertor_obj);
+
+
+// ****
+// use Yield to pause Execution 
+// => We can stop the funcitonality of generator fUCNTION BY USING  yield keyword
+// ==> yield expression returns a value rather than terminating the Program 
+
+ function* first()
+ {
+    console.log('Before 122')
+    yield 1 ;
+
+    console.log('Before 2 After 1 ')
+    yield 1 ;
+ }
+
+
+   const getobj = first();
+
+  console.log(getobj.next());       // with this .next()  Code upto first yield is Executed 
+
+//   *** Can pass Arguemnts to Generator Function 
+
+
+</script>
 
 </body>
 </html>
