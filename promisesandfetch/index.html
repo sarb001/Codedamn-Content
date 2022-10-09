@@ -71,37 +71,20 @@
             // })
 
 
-                // Promise =>> 
+            
 
-                // ==> Here Promise will take functions  two parameters (resolve , reject ) 
+                // Promises on Notebook 
 
-                // and Logic is applied  
+            //       <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
 
+            // <!-- function  getmePromise()
+            //   {
+            //         // ....
+            //         // ....
+            //         return <something> // this is promise 
+            //   } -->
 
-                // after on this variable   applied .then  
-                // and write message  for success and failure  case 
-
-
-                    // let p  = new Promise((resolve,reject) =>
-                    // {
-                    //     let a = 1 + 1;
-                    //     if(a == 2) { resolve('success')}
-                    //     else {reject('error')}
-                    // })
-    
-                    //     console.log(p)
-                        
-
-
-                    // p.then((message) =>
-                    // {
-                    //         console.log('This is  in then' + message)
-                    // })
-                    // .catch((message) =>
-                    // {
-                    //     console.log('This is in catch' + message)
-                    // })
-
+                // Benefit Of Promises  ==> 
 
                 // Promises  are really useful when things   taking a long  loading time 
                 //  and we want to perform some function after it 
@@ -111,20 +94,7 @@
 
 
 
-                    // function  getmeaPromise()
-                    // {
-                    //     return fetch('/data.json')
-                    // }
-
-                    // console.log(getmeaPromise());
-
-
-                //     getmeaPromise().then(result =>
-                //    {
-                //         console.log(result)
-                //    })
-
-
+    // *********      Promise Example  ==>  
                     // Simple way of getting data or Representing a Promise  => 
                     // fetch will also return a Promise in Output 
 
@@ -132,24 +102,45 @@
 
                      // ==>  const user = fetch('/data.json');
 
-                    const API = "https://jsonplaceholder.typicodeom/posts/2";
-                    const user = fetch(API)
+                            // const API = "https://jsonplaceholder.typicodeom/posts/2";
+                            // const user = fetch(API)
 
-                    console.log(user);
+                            // console.log(user);
 
-                    user.then(function(data)
-                    {
-                        console.log(data);
-                    })
-                    .catch(err=>
-                    {
-                        console.log('Wrong data',err)
-                    })
+                            // user.then(function(data)
+                            // {
+                            //     console.log(data);
+                            // })
+                            // .catch(err=>
+                            // {
+                            //     console.log('Wrong data',err)
+                            // })
 
 
 
-                    // Console will show us allthe data 
+                    // Console will show us all the data 
+// *******
 
+
+            // Promise Chaining ==> 
+
+
+                        let p = new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                resolve(10);
+                            }, 100);
+                        });
+
+                        p.then((result) => {
+                            console.log(result);
+                            return result * 2;
+                        }).then((result) => {
+                            console.log(result);
+                            return result * 3;
+                        });
+
+
+                        // output => 10 ,20 
 
     </script>
 <!-- 
@@ -158,135 +149,10 @@
 </html>
 
 
-<!-- Promise -->
 
-        <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
-
-        <!-- function  getmePromise()
-          {
-                // ....
-                // ....
-                return <something> // this is promise 
-          } -->
-
-    <!--  getmePromise()  -->
-
-           <!-- In above function like getmeaPromise 
-             we write the piece of Code and the at the last we
-             want to  return something which is let's suppose  promise
-             
-             so this something in line 112  shows us that it will return us
-             output surely or  after  some time 
-             
-           -->
-
-           <!--   To Better Deal with  this Syntax 
-                we used  .then() to deal 
-               -->
-
-
-   <!--   So *****  -->  
-
-    <!-- Example is like =>  -->
-                <!-- function getmePromise()
-                    {
-                         return fetch('/data.json')
-                    } -->
-
-
-        <!--  Above Example be Like  fetch the data from json file     
-          which surely return us the Promise -->
-
-           <!--   console.log(getmePromise())  -->
-           <!-- After Consoling the Value we get to know about the Situation of Promise   -->
-
-
-       
-     <!-- Both Resolve and Reject are handled in Promise   -->    
-
-      <!-- Promise can be more or less in  three states  ->
-          'pending'  ||  'Resolved'  ||  'Reject'  -->
-
-
-          <!--  After Consoling the  value we get to know that it returns us a state 
-                To  get the desired output  we go deeper one Level 
-
-
-                .then method returns  a promise which allows for Method Chaining 
-           -->
- 
-                      <!-- function  getmeaPromise()
-                    {
-                        return fetch('/data.json')
-                    }
-
-                    getmeaPromise().then(result =>
-                   {
-                        console.log(result)
-                   }) -->
-
-
-   <!--  ******* -->
-   <!-- .catch in js  -->
-
-    <!-- After then when promise moved from pending to some other state 
-         or if there is any error , to handle it Properly we used catch 
-         
-
-         
-    -->
-
-            <!-- promise.then((data) =>
-            {
-                console.log('Get Something',data)
-            }).catch((error) =>
-            {
-                console.log('Promise failed' ,error)
-            })
-
-                            -->
-
-
-
-
-
-                            // <!--  ***********  -->
+                               <!--  ***********  -->
                             <!-- This code  will be Executed in Script tag only  -->
-                            //    <!-- Async &  Await  -->
-              
-                          <!-- //   Here How Normal  Function works Execution 
-              
-                      // function promiset()
-                      // {
-                      //     return new Promise(resolve =>
-                      //     {     setTimeout(() =>
-                      //         {
-                      //             resolve();
-                      //         },1000)
-                      //     })
-                      // } -->
-              
-                      <!-- // promiset().then(() =>
-                      // {
-                      //     console.log('statement 111 ')
-                      //     return promiset();
-                      // }).then(() =>
-                      // {
-                      //     console.log('statement 222 ')
-                      //     return promiset();
-                      // }).then(() =>
-                      // {
-                      //     console.log('statement 3333 ')
-                      //     return promiset();
-                      // })
-               -->
-              
-              
-                      <!-- // Output is ->  statement 111 
-                                    //  statement 222
-                                   //  statement 333 
-                                    -->
-                                   
+                            <!-- Async &  Await  -->
               
                           <!-- // *********
               
@@ -314,7 +180,7 @@
                           //  before console then it is not sure data will be fetched first and then  valueis consoled 
               
               
-                          // So need something which can help or wait until thisfunction return us back something 
+                          // So need something which can help or wait until this function return us back something 
               
               
                           // So write await  -->
@@ -335,13 +201,12 @@
                        boot();
                -->
               
-                      <!-- //  sow await helps us to wait sometime and then gives us output 
+                      <!-- //  so await helps us to wait sometime and then gives us output 
                       //   ==>       So with Async-Await we are able to 
                       // Write Code Efficiently , Cleaner Way 
               
               
                       // Remember await is for Promise not for  the function  -->
-
 
 
  
