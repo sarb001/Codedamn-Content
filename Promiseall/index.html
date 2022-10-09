@@ -64,11 +64,18 @@
     //    otherwise  with await only we get  only promise with pending state which is not  efficient 4
 
 
-    // Definiton of Promsise.all -> It is an method which  takes promises an input , and returns a Single Promise
+    // Definiton of Promsise.all -> 
+
+    //  It is an method which  takes promises an input , and returns a Single Promise
     //  in the form of an array 
+
+
+    // ***) ==> Promise.all() -> Let Suppose if we want to POst Something  on 3  Social Media platforms 
+    // At once like fb ,insta, snapchat 
     
-
-
+    // then we can use somthing like Promise.all()   => It will help to Post Data without Depending in each other   
+    
+    // ==>  Promise.all() “takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises.”
 
 
 
@@ -83,7 +90,6 @@
             //          const req3 =  fetch('/data3.json') 
 
             //             const promise = Promise.all([req1,req2,req3])
- 
             //              console.log( await promise);
             //     }
 
@@ -96,9 +102,7 @@
             // Promise.all returns a single Promise that resolves all  when all promises passed . 
 
 
-
             // *****
-
 
                     async function promisefun()
                 {
@@ -106,15 +110,17 @@
                      const req2 =  fetch('/data2.json') 
                      const req3 =  fetch('/data3.json') 
 
-                    const promise = Promise.all([req1,req2,req3])        
-                    const responses = await promise
+                    const promise = Promise.all([req1,req2,req3])    
+                    console.log(promise);    
+                    // const responses = await promise
 
-                        const jsondata = await Promise.all(responses.map(t => t.json()))
-                        console.log(jsondata);
+                    // const jsondata = await Promise.all(responses.map(t => t.json()))
+                    // console.log(jsondata);
                 }
 
                promisefun(); 
   
+
             //    If Single Promise fails  then  all fails
 
 
