@@ -21,24 +21,12 @@
     Helps to fetch resources async across the  Network  
     -->
 
-    <!-- Promises()  -->
 
-    <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
 
     <script>
 
-    // const promiseObject = fetch('/data.json');
-    // promiseObject.then(response => {
-    //     const promiseObject2 = response.json();
-    //     promiseObject2.then(data =>
-    //     {
-    //         console.log(data)
-    //     })
-    // })
+    
 
-    // .then  method returns a promise which  takes two arguemnts  -> callback function and other is failure cases withcatch
-    
-    
     // *******
     //  JS Callbacks ==> 
         // A Callback  function is a function which is passed into another function as an argument and then invoked 
@@ -54,17 +42,7 @@
                 // },200)
 
         // In this we are telling js to call our callback Function after Waitig for 200ms or 2s .
-        // The setTimeout function tkaes two paramterrs : a callback fn and a timeout number in milliseconds
-
-
-        // ****
-        // In Simple   way we can writwe this as -> 
-
-                //  const timeoutcallback = () =>
-                //  {
-                //     console.log("Hello NEW WAY ")
-                //  }
-                //  setTimeout(timeoutcallback,300);
+        // The setTimeout function takes two paramters :->  a callback fn and a timeout number in milliseconds
 
 
         //  Let's me EXPLAIN you with an more  example => 
@@ -93,24 +71,98 @@
             // })
 
 
+                // Promise =>> 
+
+                // ==> Here Promise will take functions  two parameters (resolve , reject ) 
+
+                // and Logic is applied  
+
+
+                // after on this variable   applied .then  
+                // and write message  for success and failure  case 
+
+
+                    // let p  = new Promise((resolve,reject) =>
+                    // {
+                    //     let a = 1 + 1;
+                    //     if(a == 2) { resolve('success')}
+                    //     else {reject('error')}
+                    // })
+    
+                    //     console.log(p)
+                        
+
+
+                    // p.then((message) =>
+                    // {
+                    //         console.log('This is  in then' + message)
+                    // })
+                    // .catch((message) =>
+                    // {
+                    //     console.log('This is in catch' + message)
+                    // })
+
+
+                // Promises  are really useful when things   taking a long  loading time 
+                //  and we want to perform some function after it 
+
+                // For Eg Like an Image if we are downloading from server if it takes long time 
+                // then we can show when it gets downloaded , if fails then show Error 
 
 
 
+                    // function  getmeaPromise()
+                    // {
+                    //     return fetch('/data.json')
+                    // }
 
-         
+                    // console.log(getmeaPromise());
+
+
+                //     getmeaPromise().then(result =>
+                //    {
+                //         console.log(result)
+                //    })
+
+
+                    // Simple way of getting data or Representing a Promise  => 
+                    // fetch will also return a Promise in Output 
+
+                    // For Json data => 
+
+                     // ==>  const user = fetch('/data.json');
+
+                    const API = "https://jsonplaceholder.typicodeom/posts/2";
+                    const user = fetch(API)
+
+                    console.log(user);
+
+                    user.then(function(data)
+                    {
+                        console.log(data);
+                    })
+                    .catch(err=>
+                    {
+                        console.log('Wrong data',err)
+                    })
+
+
+
+                    // Console will show us allthe data 
+
 
     </script>
-
-     <h2> Inside dd wrvqew ervds   </h2>
+<!-- 
+     <h2> Inside dd wrvqew ervds   </h2> -->
 </body>
 </html>
 
 
 <!-- Promise -->
 
-    <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
+        <!-- Promises is kind of Object which tells us or promise us to return the output in future  -->
 
-      <!-- function  getmePromise()
+        <!-- function  getmePromise()
           {
                 // ....
                 // ....
@@ -163,12 +215,12 @@
                 .then method returns  a promise which allows for Method Chaining 
            -->
  
-                     <!--  function  getmeaPromise()
+                      <!-- function  getmeaPromise()
                     {
                         return fetch('/data.json')
-                    } -->
+                    }
 
-                    <!-- getmeaPromise().then(result =>
+                    getmeaPromise().then(result =>
                    {
                         console.log(result)
                    }) -->
